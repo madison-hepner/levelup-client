@@ -1,4 +1,5 @@
 import React from "react"
+import { useHistory } from "react-router"
 import { Link } from "react-router-dom"
 import "./NavBar.css"
 
@@ -12,8 +13,8 @@ export const NavBar = () => {
             <li className="navbar__item">
                 Navigation link
             </li>
-            <li className="navbar__item">
-                Navigation link
+            <li className="navbar__register_game">
+                <Link className="register_game_link" to="/games/new">Register a Game</Link>
             </li>
             {
                 (localStorage.getItem("lu_token") !== null) ?
